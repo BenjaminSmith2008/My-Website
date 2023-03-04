@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", inital-scale="1.0">
+    <title>
+        Benjamin's Website
+    </title>
+    <link rel="stylesheet" href="style.css"?>
+    <script src="https://kit.fontawesome.com/b8fc5305a3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Network Engineer, Coder</p>
+            <h1>Hi, I'm <span>Benjamin</span><br> From the South West</h1>
+        </div>
+        <div class="header-phone">
+            <p>Network Engineer, Coder</p>
+            <h1>Hi, I'm <span>Benjamin</span><br> From the <br>South West</br></h1>
+        </div>
+    </div>
+
+
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, I am Benjamin, I have had a passion for computers for over a decade. Ever since I was young I had a strong passion for networking</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML/CSS/JS Coding</span><br>Designing Web/app interfaces</li>
+                        <li><span>School Device Mangemnt</span><br>Installing computers, configuring and intalling software, access points, configuring switches, devices and many more</li>
+                        <li><span>Python Coding and Logic</span><br>Making, designing running and troublshooting code</li>
+                    </ul>
+                </div> 
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>School Device Management</span><br>Installing computers, configuring and istalling software, acess points, configuring and much more</li>
+                        <li><span>Website Manager</span><br>Registering domain, Google Workspace and designing the website from the ground upwards the writing it.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>1st School</span><br>Years 2015 - 2021</li>
+                        <li><span>2nd School</span><br>2021 - Current</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------portfolio--------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h2>Paxton Access Control System</h2>
+                    <p>This access control system allows users to get in and out of the buidling efficently and quickly with many different types of tags. Like wristbands, cards, implants, tokens and many more devices.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h2>Ubiquti Networking Setup</h2>
+                    <p>This gigabit up and down conection is made the most of by using the unify UDM Pro and multiple 10 gigabit fibre optic cables running around the building. The setup is not just made up of fibre, closer devices are using CAT6A ethernet cables. The use of the POE swich allows securtiy cameras to be installed.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h2>Reolink CCTV Camera System</h2>
+                    <p1>This CCTV system made up of a 16 chanel NVR with 24/7 record is made up of 6 camera and many are mounted in hidden places and from large distances away from the NVR</p1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------contact--------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    benjamin@benjamin-smith.co.uk</p>
+                <div class="social-icons">
+                    <a href="https://github.com/BenjaminSmith2008"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/mtb_sprout/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/mtb-sprout"><i class="fa-brands fa-youtube"></i></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder = "Your Message"></textarea>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2023 Benjamin. Designed and made by Benjamin Smith</p>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tablink of tabcontents){
+            tablink.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
